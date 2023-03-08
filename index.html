@@ -11,29 +11,35 @@
 
 <body>
 
-    <main class="">
-        
-        <div class="flex items-center justify-center h-screen w-full bg-red-400">
-            
-            <div class="  h-[350px] w-[500px] font-bold text-4xl space-x-5 text-white">
+    <main>
+
+        <div class="flex items-center justify-center h-screen w-full bg-purple-400">
+
+            <div class=" border-2 p-3 font-bold text-4xl space-x-5 text-white shadow-2xl bg-purple-500">
                 <div class="text-center">
+                    <h1 class="mb-3">Stop Watch</h1>
                     <span class="mb-5" id="stop-minute"> 00 </span>
                     <span class="mb-5 " id="stop-second"> 00 </span>
-                    <span class="mb-5 " id="milisecond"> 00 </span> <hr class="mt-2 mb-4 w-[0]">
+                    <span class="mb-5 " id="milisecond"> 00 </span>
+                    <hr class="mt-2 w-[0]">
                     <button id="start" class="bg-green-400 p-2 px-3 text-xl rounded-md">start</button>
-                    <button id="stop"class="bg-red-500 p-2 px-3 text-xl rounded-md">stop</button>
-                    <button id="reset"class="bg-purple-400 p-2 px-3 text-xl rounded-md">reset</button>
+                    <button id="stop" class="bg-red-500 p-2 px-3 text-xl rounded-md">stop</button>
+                    <button id="reset" class="bg-purple-400 p-2 px-3 text-xl rounded-md">reset</button>
                 </div>
-                    <div class="flex text-center space-x-5 mt-5">
-                        <h1>Hour  <span id="hour">00</span> </h1>
-                    <h1>Minutes  <span id="minutes">00</span></h1>
-                    <h1>second <span id="second">00</span></h1>
-                     <span  class="mt-10" id="ap"></span>
-                    </div>
-                     
+                <hr class="mt-4">
+                <div class="flex text-center space-x-5 mt-5">
+                    <h1>Hour <p><span id="hour">00</span> </p>
+                    </h1>
+                    <h1>Minutes <p><span id="minutes">00</span></p>
+                    </h1>
+                    <h1>second <p><span id="second">00</span></p>
+                    </h1>
+                    <span class="mt-12 text-xl text-green-300 " id="ap">PM</span>
+                </div>
+
             </div>
         </div>
-       
+
     </main>
     <!-- script -->
     <script src="app.js"></script>

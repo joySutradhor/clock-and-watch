@@ -7,10 +7,27 @@ const second = document.getElementById('second');
 
 setInterval(function time (){
   const date = new Date() ;
-    const hours = date.getHours();
+  
+    let hours = date.getHours();
+    if(hours === 0){
+      hours = hours + 12 ;
+    }
     const min = date.getMinutes ();
     const seconds = date.getSeconds();
-    hours<10 ? hour.innerText = "0" + hours : hour.innerText=  (hours-12);
+    // hours<10 ? hour.innerText = "0" + hours : hour.innerText=  (hours-12);
+
+    if(hours === 12){
+      hour.innerText = hours ;
+    }
+    else if(hours<10){
+      hour.innerText = "0" + hours ;
+    }
+    else{
+      hour.innerText=  (hours-12) ;
+    }
+
+
+
     seconds<10 ? second.innerText = "0" + seconds : second.innerText = seconds ;
     min<10 ? minutes.innerText = "0" + min : minutes.innerText = min ;
     hours>=12 ? document.getElementById("ap").innerText="PM" : document.getElementById('ap').innerText= "AM" ;  
@@ -72,7 +89,7 @@ buttonReset.onclick = function(){
     minit++
     seconds = 0 ;
     appendSeconds.innerText = "0" +seconds;
-    appendMint.innerText = "0" +minit ;
+    appendMint.innerText = "0" + minit ;
 
    }
 
